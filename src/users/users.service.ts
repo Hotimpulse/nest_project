@@ -21,7 +21,7 @@ export class UsersService {
       throw new BadRequestException('Role USER not found');
     }
 
-    await user.$set('roles', [role.id]);
+    await user.$set('roles', [role?.id]);
     user.roles = [role];
     return user;
   }
